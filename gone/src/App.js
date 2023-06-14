@@ -19,7 +19,7 @@ function App() {
       <input type='color' onChange={(temp)=>updateHex(temp.target.value)} value={hex} ></input>
       <br/>
       <br/>
-      <button >submit</button>
+      <button>submit</button>
      </form>
     </div>
   );
