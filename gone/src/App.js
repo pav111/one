@@ -8,7 +8,7 @@ function App() {
   };
 
   const reducer = (state, action) => {
-    switch (action.typ) {
+    switch (action.type) {
       case 'UPDATE_COLOR':
         return { ...state, color: action.payload };
       case 'UPDATE_HEX':
@@ -25,7 +25,7 @@ function App() {
   const submit = (e) => {
     e.preventDefault();
     alert("color: " + state.color + " hex code: " + state.hex);
-    dispatch({ typ: 'RESET' });
+    dispatch({ type: 'RESET' });
   };
 
   return (
@@ -33,7 +33,7 @@ function App() {
       <form onSubmit={submit}>
         <input
           value={state.color}
-          onChange={(e) => dispatch({ typ: 'UPDATE_COLOR', payload: e.target.value })}
+          onChange={(e) => dispatch({ type: 'UPDATE_COLOR', payload: e.target.value })}
           type='text'
           placeholder='enter color name'
         />
